@@ -1,6 +1,5 @@
 class Game:
 
-
     def get_winning_choice(player_1, player_2):
 
         if player_1.choice == player_2.choice:
