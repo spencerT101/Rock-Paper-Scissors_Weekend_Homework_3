@@ -46,6 +46,21 @@ class TestGame(unittest.TestCase):
         result = Game.get_winning_choice(self.bazooka, self.scissors)
         self.assertEqual(self.scissors, result)
     
+    def test_paper_beats_rock(self):
+        result = Game.get_winning_choice(self.paper, self.rock)
+        self.assertEqual(self.paper, result)
+    
+    def test_rock_loses_to_paper(self):
+        result = Game.get_winning_choice(self.rock, self.paper)
+        self.assertEqual(self.paper, result)
+    
+    def test_paper_beats_bazooka(self):
+        result = Game.get_winning_choice(self.paper, self.bazooka)
+        self.assertEqual(self.paper, result)
+    
+    def test_bazooka_loses_to_paper(self):
+        result = Game.get_winning_choice(self.bazooka, self.paper)
+        self.assertEqual(self.paper, result)
 
 
     

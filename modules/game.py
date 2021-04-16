@@ -13,6 +13,10 @@ class Game:
         if player_1.choice == "scissors":
             if player_2.choice == "paper" or player_2.choice == "bazooka":
                 return player_1
+        
+        if player_1.choice == "paper":
+            if player_2.choice == "rock" or player_2.choice == "bazooka":
+                return player_1
     
         
         
