@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }} - our game</title>
+</head>
+<body>
+    <section>
+    <h1> Rock, Paper, Scissors!</h1>
+    <div>
+        <h4> player 1:</h4>
+        <form action = "/" method = "post">
+            <label for = "choice1">Choice</label> 
+            <input type = "text" name = "choice1" class = "choice">
+       
+
+        <h4> player 2:</h4>
+        <form action = "/" method = "post">
+            <label for = "choice2">Choice</label> 
+            <input type = "text" name = "choice2" class= "choice">
+            <input type = "submit" value = add_choice>
+    </form>
+    <h4>player 1 chose : {{choice1}}</h4>
+    <h4>player 2 chose : {{choice2}}</h4>
+    </div>
+    <div>        
+       <h1><b>{{victor}}</b></h1>
+    </div>
+    </section>
+</body>
+</html>
