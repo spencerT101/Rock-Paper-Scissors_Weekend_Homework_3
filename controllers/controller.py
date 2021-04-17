@@ -7,9 +7,9 @@ from modules.game import get_winning_choice
 
 @app.route('/')
 def index():
-    return render_template("index.html", title = "Home")
+    return render_template("welcome.html", title = "Home")
 
-@app.route('/', methods= ['POST'])
+@app.route('/game', methods= ['POST'])
 def add_choice():
     add_choice1 = request.form["choice1"]
     add_choice2 = request.form["choice2"]
@@ -18,7 +18,7 @@ def add_choice():
     return render_template("index.html", title = "Game", victor = winner, choice1 = add_choice1, choice2 = add_choice2)
 
 
-@app.route('/')
+@app.route('/game')
 def result(player_1, player_2):
     winner =  f"The winner is {get_winning_choice(player_1, player_2)}"
     return render_template("index.html", title = "Game", victor = winner)
